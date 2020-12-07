@@ -95,7 +95,8 @@ namespace Yorozu
 							if (GUILayout.Button("Play"))
 							{
 								var animationClip = state.state.motion as AnimationClip;
-								PlayAnimation(state.state.name, layerIndex, animationClip.length);
+								if (animationClip != null)
+									PlayAnimation(state.state.name, layerIndex, animationClip.length);
 							}
 
 							if (GUILayout.Button("Select AnimationClip"))
